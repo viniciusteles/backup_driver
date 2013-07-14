@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require File.expand_path("../../lib/backup_driver", __FILE__)
+BackupDriver::CLI.start
