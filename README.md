@@ -31,13 +31,17 @@ Or install it yourself as:
 
 ### Backup nginx log files
 
-  backup_driver backup --source /var/log/nginx --bucket "s3://mybucket" --gpg-options "--recipient 'my@email.com'"
+```shell
+backup_driver backup --source /var/log/nginx --bucket "s3://mybucket" --gpg-options "--recipient 'my@email.com'"
+```
 
 **CAUTION**: BackupDriver removes the log files after sending them to Amazon S3. If you don't want that to happen, please consider using a different tool or change the code to suite your needs.
 
 ### Backup mysql database
 
-  backup_driver mysql --name db_name --user db_user --password db_password --gpg-options "--recipient 'my@email.com'"  
+```shell
+backup_driver mysql --name db_name --user db_user --password db_password --gpg-options "--recipient 'my@email.com'"  
+```
 
 ## Contributing
 
