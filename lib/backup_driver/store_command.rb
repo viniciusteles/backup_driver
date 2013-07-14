@@ -22,7 +22,7 @@ module BackupDriver
     end
 
     def basename
-      driver.create_command.basename
+      driver.create_command.backup_basename
     end
 
     def year

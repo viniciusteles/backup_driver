@@ -5,7 +5,7 @@ module BackupDriver
       driver.log << `/usr/bin/mysqldump -u #{options[:user]} #{password_params} #{options[:name]} > #{source}/#{options[:name]}.sql`
     end
 
-    def basename
+    def backup_basename
       options[:name]
     end
     
