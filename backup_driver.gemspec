@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = BackupDriver::VERSION
   spec.authors       = ["Vinicius Teles"]
   spec.email         = ["vinicius@improveit.com.br"]
-  spec.description   = %q{Backup files to Amazon S3}
-  spec.summary       = %q{Backup stuff to a remote server.}
+  spec.description   = %q{BackupDriver is a tool created to backup files from Unix systems.}
+  spec.summary       = %q{BackupDriver can be used to backup log files and mysql databases to Amazon S3.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
