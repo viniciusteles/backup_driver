@@ -1,6 +1,6 @@
 # BackupDriver
 
-BackupDriver is a tool created to backup files form Unix systems. It's was created to address some very specific personal needs:
+BackupDriver is a tool created to backup files from Unix systems. It's was created to address some very specific personal needs:
 
   * Backup log files to Amazon S3 and remove them from the server
   * Backup local mysql databases to Amazon S3
