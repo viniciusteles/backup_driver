@@ -51,7 +51,13 @@ backup_driver mysql --name db_name --user db_user --password db_password --gpg-o
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+**Copyright (c) 2013 [Vinícius Manhães Teles][v] ([@viniciusteles][t])**
+Released under the [MIT License][l].
+
 [gpg]:       http://www.gnupg.org/
 [s3cmd]:     http://s3tools.org/s3cmd
 [mysqldump]: http://dev.mysql.com/doc/refman/5.1/en/mysqldump.html
 [b]:         https://github.com/meskyanichi/backup
+[v]:         http://viniciusteles.com
+[t]:         https://twitter.com/viniciusteles
+[l]:         https://github.com/viniciusteles/backup_driver/blob/master/LICENSE.txt
