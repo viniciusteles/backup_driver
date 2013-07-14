@@ -21,7 +21,12 @@ module BackupDriver
     end
 
     def create_command
-      @create_command ||= CreateCommand.new(self)
+      @create_command ||= select_create_command
+    end
+
+    def select_create_command
+      return MysqlCreateCommand.new(self) if options[:mysql]
+      CreateCommand.new(self)
     end
 
     def encrypt_command

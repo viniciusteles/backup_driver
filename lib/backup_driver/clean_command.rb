@@ -1,21 +1,16 @@
 module BackupDriver
   class CleanCommand < Command
     def do
-      remove_backup_file
-      remove_encrypted_file
       remove_source_files
-    end
-
-    def remove_backup_file
-      driver.log << `/bin/rm #{driver.create_command.backup_file}`
-    end
-
-    def remove_encrypted_file
-      driver.log << `/bin/rm #{driver.encrypt_command.encrypted_file}`
+      remove_temp_dir
     end
 
     def remove_source_files
       driver.log << `/bin/rm #{driver.create_command.source}/*`
+    end
+
+    def remove_temp_dir
+      driver.log << `/bin/rm -r #{driver.create_command.temp_dir}`
     end
   end
 end

@@ -1,7 +1,7 @@
 module BackupDriver
   class StoreCommand < Command
     def do
-      driver.log << `/usr/bin/s3cmd put --reduced-redundancy #{encrypted_file} #{bucket}/#{basename}/#{year}/#{month}/`
+      driver.log << `/usr/bin/s3cmd put --reduced-redundancy #{encrypted_file} #{bucket}/#{path}`
     end
 
     def encrypted_file
@@ -10,6 +10,15 @@ module BackupDriver
 
     def bucket
       options[:bucket]
+    end
+
+    def path
+      "#{basedir}#{basename}/#{year}/#{month}/"
+    end
+
+    def basedir
+      return "mysql/" if options[:mysql]
+      ""
     end
 
     def basename
