@@ -7,6 +7,7 @@ module BackupDriver
   %w(
     command
     create_command
+    mysql_create_command
     encrypt_command
     store_command
     clean_command
