@@ -5,7 +5,7 @@ BackupDriver is a tool created to backup files from Unix systems. It's was creat
   * Backup log files to Amazon S3 and remove them from the server
   * Backup local mysql databases to Amazon S3
 
-The generated backup file is encrypted using GPG and sent to Amazon S3. The operations are performed using tools that must be installed on the system:
+The generated backup file is encrypted using [gpg][] and sent to Amazon S3. The operations are performed using tools that must be installed on the system:
 
   * [gpg][]
   * [s3cmd][]
