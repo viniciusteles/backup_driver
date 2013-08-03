@@ -14,7 +14,7 @@ module BackupDriver
     end
 
     def password_params
-      return "-p #{options[:password]}" if options[:password]
+      return "--password=#{options[:password]}" if options[:password]
       ""
     end
   end
